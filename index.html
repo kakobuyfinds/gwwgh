@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#263e33">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <title>wheebuy spreadsheet – svensk guide till sneakers, kläder och accessoarer</title>
+  <meta name="description" content="Utforska wheebuy spreadsheet med en svensk guide till sneakers, kläder och accessoarer. Jämför mått, material och produktuppgifter före ditt köp.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:title" content="wheebuy spreadsheet – gör ett mer genomtänkt val">
+  <meta property="og:description" content="En svensk vägledning till produktlänkar, storlekar och material. Börja med kategorin och jämför detaljerna.">
+  <meta property="og:image" content="https://www.tike.gr/files/images/products/media/CW2/CW2288-111/images/CW2288-111.jpg.webp">
+  <meta property="og:image:alt" content="Vit Nike Air Force 1-sneaker sedd från sidan">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="wheebuy spreadsheet – svensk köpguide">
+  <meta name="twitter:description" content="Praktiska råd om sneakers, kläder, huvudbonader och smycken.">
+  <meta name="twitter:image" content="https://www.tike.gr/files/images/products/media/CW2/CW2288-111/images/CW2288-111.jpg.webp">
+  <meta name="twitter:image:alt" content="Vit Nike Air Force 1-sneaker sedd från sidan">
+
+  <link rel="preconnect" href="https://www.tike.gr">
+
+  <!-- Filnamn: index.html. Lägg till en absolut canonical-URL när sidans slutliga publiceringsadress är känd. -->
+
+  <style>
+    :root {
+      --paper: #f5f3e9;
+      --white: #fff;
+      --ink: #202a24;
+      --green: #263e33;
+      --muted: #566258;
+      --line: #d6dace;
+      --lime: #d9ed98;
+      --soft: #eaede2;
+      --radius: 20px;
+      --width: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-underline-offset: 4px; }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid #527428;
+      outline-offset: 5px;
+    }
+    img { display: block; max-width: 100%; }
+    h1, h2, h3, p, figure { margin: 0; }
+    h1, h2, h3 { line-height: 1.12; }
+    h2 { font-size: clamp(1.8rem, 3.2vw, 2.8rem); letter-spacing: -.045em; }
+    h3 { font-size: 1.12rem; letter-spacing: -.02em; }
+    .wrap { width: min(var(--width), calc(100% - 48px)); margin-inline: auto; }
+    .masthead {
+      min-height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .identity { text-decoration: none; display: flex; align-items: center; gap: 12px; }
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 45px;
+      height: 45px;
+      background: var(--green);
+      color: var(--lime);
+      font-size: 23px;
+      font-weight: 850;
+      border-radius: 50%;
+    }
+    .identity strong { display: block; font-size: 15px; line-height: 1.3; }
+    .identity small { display: block; font-size: 11px; color: var(--muted); letter-spacing: .09em; }
+    .header-note { font-size: 12px; color: var(--muted); text-align: right; }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .categories { padding: 22px 0 26px; }
+    .categories-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 13px;
+    }
+    .categories-top p { font-size: 12px; color: var(--muted); }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .category-grid a {
+      padding: 12px 13px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 650;
+      background: rgba(255,255,255,.5);
+    }
+    .category-grid a::after { content: "↗"; color: var(--muted); flex-shrink: 0; }
+    .category-grid a:hover { background: var(--green); color: var(--white); border-color: var(--green); }
+    .category-grid a:hover::after { color: var(--lime); }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.06fr .94fr;
+      background: var(--green);
+      color: var(--paper);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .hero-copy { padding: clamp(28px, 4vw, 58px); align-self: center; }
+    .hero .eyebrow { color: var(--lime); margin-bottom: 26px; }
+    h1 {
+      font-size: clamp(3.1rem, 6.5vw, 5.5rem);
+      letter-spacing: -.065em;
+      overflow-wrap: anywhere;
+      margin-bottom: 22px;
+    }
+    .hero-lead { font-size: clamp(1.08rem, 1.7vw, 1.35rem); line-height: 1.45; margin-bottom: 16px; }
+    .hero-description { color: #d6e0d6; max-width: 48ch; font-size: 14px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 14px 22px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 750;
+      background: var(--lime);
+      color: var(--green);
+    }
+    .button:hover { background: #e7f6b8; }
+    .hero .button { margin-top: 28px; }
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 28px;
+      background: #edf0e6;
+      color: var(--ink);
+    }
+    .hero-image { background: white; border-radius: 12px; overflow: hidden; }
+    .hero-image img { width: 100%; height: auto; aspect-ratio: 6 / 5; object-fit: contain; }
+    .hero-visual figcaption {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 17px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .hero-visual figcaption strong { color: var(--green); }
+    .quick-answer {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 32px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .quick-answer h2 { font-size: 17px; letter-spacing: -.02em; }
+    .quick-answer p { max-width: 88ch; font-size: 15px; }
+    .section { padding-block: 64px; }
+    .section-head {
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+    .section-head .eyebrow { color: var(--muted); margin-bottom: 12px; }
+    .section-head > p { font-size: 14px; color: var(--muted); max-width: 55ch; }
+    .gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    .style-card { min-width: 0; }
+    .style-image {
+      display: block;
+      overflow: hidden;
+      border-radius: 12px;
+      background: white;
+    }
+    .style-image img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+    .style-card figcaption { padding: 17px 2px 0; }
+    .style-card .eyebrow { color: var(--muted); font-size: 10px; margin-bottom: 8px; }
+    .style-card p { font-size: 13px; color: var(--muted); margin-top: 9px; }
+    .image-note { font-size: 12px; color: var(--muted); margin-top: 23px; max-width: 100ch; }
+    .process {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 58px;
+      padding: 40px;
+      border-radius: var(--radius);
+      background: var(--soft);
+    }
+    .process-intro .eyebrow { color: var(--muted); margin-bottom: 14px; }
+    .process-intro p { color: var(--muted); margin-top: 18px; font-size: 14px; }
+    .steps { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+    .steps li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 16px;
+      padding-block: 18px;
+      border-bottom: 1px solid #ccd2c4;
+    }
+    .steps li:first-child { padding-top: 0; }
+    .steps li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .steps li::before {
+      content: "0" counter(step);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+      padding-top: 3px;
+    }
+    .steps p { margin-top: 6px; font-size: 14px; color: var(--muted); }
+    .guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .guide-panel { background: #fffdf7; padding: 30px; border: 1px solid var(--line); border-radius: 14px; }
+    .guide-panel h3 { font-size: 1.2rem; margin-bottom: 17px; }
+    .guide-panel ul { margin: 0; padding-left: 19px; }
+    .guide-panel li { padding: 7px 0 7px 3px; color: var(--muted); font-size: 14px; }
+    .guide-panel strong { color: var(--ink); font-weight: 650; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; margin-top: 26px; }
+    table { width: 100%; border-collapse: collapse; text-align: left; background: #fffdf7; font-size: 14px; }
+    caption { padding: 17px 20px; text-align: left; font-weight: 700; background: var(--soft); }
+    th, td { padding: 17px 20px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--green); font-weight: 700; }
+    thead th { background: #f0f2e9; font-size: 12px; }
+    tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
+    .faq-layout { display: grid; grid-template-columns: .7fr 1.3fr; gap: 58px; }
+    .faq-intro .eyebrow { color: var(--muted); margin-bottom: 12px; }
+    .faq-intro p { color: var(--muted); margin-top: 19px; font-size: 14px; }
+    details { border-bottom: 1px solid var(--line); padding-block: 20px; }
+    details:first-child { border-top: 1px solid var(--line); }
+    summary { cursor: pointer; font-size: 16px; font-weight: 700; padding-right: 12px; }
+    details p { margin-top: 14px; color: var(--muted); font-size: 14px; max-width: 76ch; }
+    .closing {
+      background: var(--lime);
+      padding: 34px 40px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+    .closing h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
+    .closing p { color: var(--green); margin-top: 10px; font-size: 14px; }
+    .closing .button { background: var(--green); color: white; flex-shrink: 0; }
+    .closing .button:hover { background: #385644; }
+    footer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      padding-block: 32px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    footer p { max-width: 95ch; }
+    footer a { align-self: start; }
+
+    @media (min-width: 1500px) {
+      .hero-copy { padding: 58px; }
+    }
+    @media (max-width: 960px) {
+      .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .hero-copy { padding: 32px; }
+      .hero-visual { padding: 20px; }
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 18px; }
+      .process, .faq-layout { gap: 30px; }
+      .section-head { gap: 24px; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: calc(100% - 32px); }
+      .masthead { min-height: 76px; }
+      .header-note { max-width: 125px; font-size: 10px; }
+      .identity strong { font-size: 13px; }
+      .identity small { font-size: 9px; }
+      .mark { width: 36px; height: 36px; font-size: 19px; }
+      .categories-top { display: block; }
+      .categories-top p { margin-top: 4px; }
+      .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .category-grid a { font-size: 12px; min-height: 46px; padding: 10px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-copy { padding: 32px 25px; }
+      h1 { font-size: clamp(3rem, 12vw, 4.7rem); }
+      .hero .eyebrow { margin-bottom: 20px; }
+      .hero-visual { padding: 20px; }
+      .hero-image img { aspect-ratio: 4 / 3; }
+      .quick-answer { grid-template-columns: 1fr; gap: 10px; padding: 25px 0; }
+      .section { padding-block: 42px; }
+      .section-head, .process, .guide-grid, .faq-layout { grid-template-columns: 1fr; }
+      .section-head { gap: 16px; }
+      .process { padding: 26px; }
+      .guide-panel { padding: 24px; }
+      .style-card h3 { font-size: 15px; }
+      .style-card p { font-size: 12px; }
+      .style-card .eyebrow { letter-spacing: .06em; font-size: 9px; }
+      th, td { padding: 13px; min-width: 130px; font-size: 12px; }
+      .closing { flex-direction: column; align-items: flex-start; padding: 28px; }
+      footer { grid-template-columns: 1fr; gap: 12px; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .category-grid a, .button { transition: background-color .15s ease, color .15s ease; }
+    }
+    @media print {
+      body { background: white; color: black; }
+      .hero, .closing { background: #eee; color: black; }
+      .hero-description, .hero .eyebrow { color: black; }
+      .gallery { grid-template-columns: repeat(4, 1fr); }
+      .button, .header-note { display: none; }
+      .section { padding-block: 24px; }
+      details { break-inside: avoid; }
+      details > p { display: block; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "#webbsida",
+        "name": "wheebuy spreadsheet – svensk guide till sneakers, kläder och accessoarer",
+        "description": "Utforska wheebuy spreadsheet med en svensk guide till sneakers, kläder och accessoarer. Jämför mått, material och produktuppgifter före ditt köp.",
+        "inLanguage": "sv",
+        "about": {
+          "@type": "Thing",
+          "name": "wheebuy spreadsheet",
+          "description": "Sökämne för en svensk vägledning om produktlänkar, storleksjämförelser och val av kläder och accessoarer."
+        },
+        "hasPart": {
+          "@id": "#vanliga-fragor"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "#vanliga-fragor",
+        "inLanguage": "sv",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Vad menas med wheebuy spreadsheet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Uttrycket används som sökfras för kalkylblad eller listor med produktlänkar som förknippas med Wheebuy. Den här sidan är en fristående svensk vägledning och innehåller inget verifierat Wheebuy-kalkylblad."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Finns det ett kalkylblad att ladda ned här?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nej. Här finns kategorilänkar och råd för att granska produkter. Kategorierna leder till angivna sidor på cafans.com och övriga länkar leder till https://www.cafans.com."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Hur väljer jag rätt storlek på sneakers och kläder?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mät fotlängden för skor och ett plagg som redan passar för kläder. Jämför sedan med måttabellen för den specifika produkten. Kontrollera om skomåttet avser fotlängd eller innermått och om plaggets mått avser kropp eller plagg."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Visar bilderna produkter som går att köpa hos CAFANS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bilderna är stilreferenser från externa bildkällor. De bekräftar inte CAFANS sortiment, lagerstatus, priser eller produkternas äkthet. Läs alltid informationen på den aktuella produktsidan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vad ska jag kontrollera före en beställning till Sverige?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kontrollera leveransland, fraktkostnad, beräknad leveranstid, returvillkor och vilka skatter eller avgifter som ingår. Be säljaren förklara oklara uppgifter innan du betalar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Är sidan officiellt kopplad till Wheebuy eller bildvarumärkena?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nej. Det här är en fristående guide utan officiell koppling till Wheebuy, Nike, Louis Vuitton, Gucci eller Hermès. Varumärkesnamnen används för att beskriva bildreferenser."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/gwwgh/">
+</head>
+
+<body>
+  <header class="wrap masthead">
+    <a class="identity" href="https://www.cafans.com" aria-label="Besök CAFANS">
+      <span class="mark" aria-hidden="true">w.</span>
+      <span>
+        <strong>Köp med eftertanke</strong>
+        <small>EN FRISTÅENDE SVENSK GUIDE</small>
+      </span>
+    </a>
+    <p class="header-note">Sneakers, vardagsplagg<br>och genomtänkta detaljer.</p>
+  </header>
+
+  <main class="wrap">
+    <nav class="categories" aria-label="Produktkategorier på CAFANS">
+      <div class="categories-top">
+        <p class="eyebrow">Börja med en kategori</p>
+        <p>Kategorilänkarna öppnar CAFANS.</p>
+      </div>
+      <div class="category-grid">
+        <a href="https://cafans.com/category-911-Shoes.html"><span>Skor <span lang="en">/ Shoes</span></span></a>
+        <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html"><span>Huvtröjor &amp; tröjor</span></a>
+        <a href="https://cafans.com/category-913-T-Shirts.html"><span>T-shirts</span></a>
+        <a href="https://cafans.com/category-914-Jackets.html"><span>Jackor</span></a>
+        <a href="https://cafans.com/category-915-Pants%2FShorts.html"><span>Byxor &amp; shorts</span></a>
+        <a href="https://cafans.com/category-916-Headwear.html"><span>Huvudbonader</span></a>
+        <a href="https://cafans.com/category-917-Sets.html"><span>Matchande set</span></a>
+        <a href="https://cafans.com/category-918-underwear%2Funderpants.html"><span>Underkläder</span></a>
+        <a href="https://cafans.com/category-919-Jersey.html"><span>Matchtröjor</span></a>
+        <a href="https://cafans.com/category-920-Accessories.html"><span>Accessoarer</span></a>
+      </div>
+    </nav>
+
+    <section class="hero" aria-labelledby="sidrubrik">
+      <div class="hero-copy">
+        <p class="eyebrow">Mindre gissningar. Bättre jämförelser.</p>
+        <h1 id="sidrubrik">wheebuy spreadsheet</h1>
+        <p class="hero-lead">Hitta din stil.<br>Granska detaljerna först.</p>
+        <p class="hero-description">
+          Söker du produktlänkar till sneakers, kläder eller accessoarer?
+          Den här svenska guiden hjälper dig att börja i rätt kategori,
+          jämföra mått och läsa produktuppgifter med ett tydligt mål.
+        </p>
+        <a class="button" href="https://www.cafans.com">
+          Utforska CAFANS <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <figure class="hero-visual">
+        <div class="hero-image">
+          <img
+            src="https://www.tike.gr/files/images/products/media/CW2/CW2288-111/images/CW2288-111.jpg.webp"
+            width="720"
+            height="600"
+            alt="Vit Nike Air Force 1-sneaker med vit Swoosh, perforerad tå och kraftig vit sula, sedd från sidan."
+            loading="eager"
+            fetchpriority="high"
+            decoding="async">
+        </div>
+        <figcaption>
+          <strong>En enkel utgångspunkt</strong>
+          <span>Nike · bildreferens</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <aside class="quick-answer" aria-labelledby="kort-svar">
+      <h2 id="kort-svar">Vad hjälper guiden dig med?</h2>
+      <p>
+        En användbar produktlista är en startpunkt. Kontrollera alltid modell,
+        variant, mått och villkor på den aktuella produktsidan.
+        Här får du en <strong>guide till wheebuy spreadsheet</strong> med praktiska
+        jämförelsepunkter och kategorilänkar till CAFANS. Något verifierat
+        Wheebuy-kalkylblad finns inte att ladda ned här.
+      </p>
+    </aside>
+
+    <section class="section" aria-labelledby="stilreferenser">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Form, proportioner och detaljer</p>
+          <h2 id="stilreferenser">Fyra sätt att läsa en produktbild.</h2>
+        </div>
+        <p>
+          Använd bilder för att förstå silhuetten. Använd mått och
+          produktbeskrivning för att bedöma om varan passar dina behov.
+          En bild ensam visar varken passform eller hela materialkänslan.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <figure class="style-card">
+          <a class="style-image" href="https://www.cafans.com" aria-label="Utforska CAFANS med inspiration från sneakers">
+            <img
+              src="https://fr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-sneaker-charlie--BO4U1PMI02_PM2_Front%20view.png?hei=640&amp;wid=640"
+              width="640"
+              height="640"
+              alt="Svarta Louis Vuitton Charlie-sneakers med vita skosnören, vit sula och vita LV-detaljer."
+              loading="lazy"
+              decoding="async">
+          </a>
+          <figcaption>
+            <p class="eyebrow">Louis Vuitton · sneakers</p>
+            <h3>Se hela silhuetten</h3>
+            <p>Jämför tåform, sulans höjd och hur skons proportioner fungerar med dina byxor.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="style-card">
+          <a class="style-image" href="https://www.cafans.com" aria-label="Utforska CAFANS med inspiration från huvtröjor">
+            <img
+              src="https://www.svpsports.ca/cdn/shop/files/Nike---Men_s-Club-Pull-Over-Hoodie-_FN3859-063__01.jpg?v=1762201582&amp;width=640"
+              width="640"
+              height="640"
+              alt="Grå Nike-huvtröja med dragsko, magficka, ribbade muddar och liten vit logotyp på bröstet."
+              loading="lazy"
+              decoding="async">
+          </a>
+          <figcaption>
+            <p class="eyebrow">Nike · huvtröja</p>
+            <h3>Läs plaggets proportioner</h3>
+            <p>Granska axellinje, ärmlängd och nederkant. Jämför sedan med ett eget plagg.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="style-card">
+          <a class="style-image" href="https://www.cafans.com" aria-label="Utforska CAFANS med inspiration från huvudbonader">
+            <img
+              src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg"
+              width="640"
+              height="640"
+              alt="Beige och brun Gucci-keps med GG-mönster och böjd skärm."
+              loading="lazy"
+              decoding="async">
+          </a>
+          <figcaption>
+            <p class="eyebrow">Gucci · huvudbonad</p>
+            <h3>Titta på form och justering</h3>
+            <p>Huvudomkrets, kronans höjd och spännets justermån hjälper dig att bedöma passformen.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="style-card">
+          <a class="style-image" href="https://www.cafans.com" aria-label="Utforska CAFANS med inspiration från armband">
+            <img
+              src="https://assets.hermes.com/is/image/hermesproduct/bracciale-tonight--500041FJ0X-worn-1-0-0-1000-1000_g.jpg"
+              width="1000"
+              height="1000"
+              alt="Orange Hermès Tonight-läderarmband med silverfärgat H-format spänne, buret på en handled."
+              loading="lazy"
+              decoding="async">
+          </a>
+          <figcaption>
+            <p class="eyebrow">Hermès · armband</p>
+            <h3>Kontrollera mått och lås</h3>
+            <p>Jämför armbandets längd och bredd med handleden. Läs även hur låset fungerar.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="image-note">
+        Bilderna är externa stilreferenser och bekräftar inte CAFANS sortiment,
+        lagerstatus, priser eller produkternas äkthet. Bildkällor:
+        Tike, Louis Vuitton, SVP Sports, Gucci och Hermès.
+      </p>
+    </section>
+
+    <section class="process" aria-labelledby="arbetsgang">
+      <div class="process-intro">
+        <p class="eyebrow">En lugnare väg till ett beslut</p>
+        <h2 id="arbetsgang">Från produktlänk till genomtänkt val.</h2>
+        <p>
+          Börja med användningen: vardag, träning eller ett särskilt tillfälle.
+          Då blir det enklare att sålla bland alternativ utan att välja enbart
+          efter en tilltalande bild.
+        </p>
+      </div>
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>Välj kategori och användning</h3>
+            <p>Bestäm vilken typ av vara du behöver, önskad passform och vilka färger som passar det du redan använder.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Jämför samma variant</h3>
+            <p>Kontrollera modellnamn, färg och storlek. En länk kan visa flera varianter med olika bilder eller produktuppgifter.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Läs mått, material och villkor</h3>
+            <p>Anteckna vad som är bekräftat och fråga om det som saknas. Kontrollera totalsumman och returvillkoren innan du beställer.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" aria-labelledby="jamforelseguide">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Sökfrågor som leder till bättre underlag</p>
+          <h2 id="jamforelseguide">Vad behöver du veta om varan?</h2>
+        </div>
+        <p>
+          Här är 24 praktiska frågor och jämförelseområden för den som söker
+          wheebuy spreadsheet för sneakers, kläder eller accessoarer.
+          Välj de punkter som faktiskt påverkar ditt köp.
+        </p>
+      </div>
+
+      <div class="guide-grid">
+        <article class="guide-panel">
+          <h3>wheebuy spreadsheet för sneakers</h3>
+          <ul>
+            <li><strong>Storleksguide för sneakers:</strong> jämför uppmätt fotlängd med den specifika modellens tabell.</li>
+            <li><strong>Fotlängd i centimeter:</strong> mät båda fötterna och utgå från den längre när du jämför.</li>
+            <li><strong>Skillnad mellan EU- och US-storlek:</strong> använd produktens tabell i stället för en generell omräkning.</li>
+            <li><strong>Passform för breda fötter:</strong> leta efter uppgifter om lästens bredd och utrymmet vid tårna.</li>
+            <li><strong>Material i ovandel:</strong> kontrollera om beskrivningen anger läder, textil eller syntet.</li>
+            <li><strong>Sulans grepp och användning:</strong> bedöm om skon är beskriven för vardag, träning eller annan aktivitet.</li>
+          </ul>
+        </article>
+
+        <article class="guide-panel">
+          <h3>wheebuy spreadsheet för kläder</h3>
+          <ul>
+            <li><strong>Måttabell för huvtröjor:</strong> jämför bröstvidd, plagglängd och ärmlängd med en tröja du använder.</li>
+            <li><strong>Passform på t-shirts:</strong> kontrollera axelmått och vidd innan du väljer en lösare modell.</li>
+            <li><strong>Material och skötselråd:</strong> läs fibersammansättning och tvättanvisningar tillsammans.</li>
+            <li><strong>Jacka för lager på lager:</strong> ta hänsyn till plaggen du tänker bära under.</li>
+            <li><strong>Midjemått och innerbenslängd:</strong> jämför båda måtten när du väljer byxor eller shorts.</li>
+            <li><strong>Storlekar i matchande set:</strong> kontrollera om överdel och underdel kan väljas separat.</li>
+          </ul>
+        </article>
+
+        <article class="guide-panel">
+          <h3>wheebuy spreadsheet för accessoarer</h3>
+          <ul>
+            <li><strong>Storleksguide för kepsar:</strong> jämför huvudomkretsen med angivet storleksintervall.</li>
+            <li><strong>Justerbar huvudbonad:</strong> kontrollera spännets typ och hur mycket storleken kan ändras.</li>
+            <li><strong>Armbandets längd:</strong> jämför produktmåttet med handledens omkrets och önskad rörelsefrihet.</li>
+            <li><strong>Ringstorlek i millimeter:</strong> kontrollera om måttet avser innerdiameter eller omkrets.</li>
+            <li><strong>Metallinnehåll i smycken:</strong> fråga efter materialspecifikation om uppgiften saknas.</li>
+            <li><strong>Skötsel av läderaccessoarer:</strong> följ råden för just det material och den ytbehandling som anges.</li>
+          </ul>
+        </article>
+
+        <article class="guide-panel">
+          <h3>Produktlänkar och köp till Sverige</h3>
+          <ul>
+            <li><strong>Kontrollera produktlänk:</strong> säkerställ att sidan fortfarande visar rätt modell och variant.</li>
+            <li><strong>Jämföra produktbilder:</strong> titta efter samma färg, detaljutformning och modellbeteckning.</li>
+            <li><strong>Frakt till Sverige:</strong> kontrollera att leverans erbjuds till din adress.</li>
+            <li><strong>Total kostnad före köp:</strong> läs vad som ingår och vilka ytterligare avgifter som kan tillkomma.</li>
+            <li><strong>Returvillkor vid fel storlek:</strong> kontrollera tidsfrist, returadress och vem som betalar frakten.</li>
+            <li><strong>Spara produktuppgifter:</strong> behåll orderbekräftelse, vald variant och de villkor som visades vid köpet.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Tre vanliga osäkerheter – och vad du bör kontrollera</caption>
+          <thead>
+            <tr>
+              <th scope="col">Om du ser …</th>
+              <th scope="col">Kontrollera …</th>
+              <th scope="col">Gå vidare när …</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Bara en storleksbokstav</th>
+              <td>Om det finns mått för den specifika produkten.</td>
+              <td>Du kan jämföra med foten eller ett plagg som passar.</td>
+            </tr>
+            <tr>
+              <th scope="row">Olika bilder i samma annons</th>
+              <td>Vilka bilder som hör till den variant du valt.</td>
+              <td>Färg, modell och variant är tydligt identifierade.</td>
+            </tr>
+            <tr>
+              <th scope="row">Otydlig totalsumma</th>
+              <td>Frakt, valuta och vilka skatter eller avgifter som ingår.</td>
+              <td>Du förstår vad du betalar och vilka kostnader som kan tillkomma.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section faq-layout" aria-labelledby="faq-rubrik">
+      <div class="faq-intro">
+        <p class="eyebrow">Korta svar på vanliga frågor</p>
+        <h2 id="faq-rubrik">Bra att veta innan du klickar vidare.</h2>
+        <p>
+          Den här sidan ger vägledning. Aktuella produktuppgifter,
+          leveransvillkor och tillgänglighet behöver kontrolleras
+          där beställningen görs.
+        </p>
+      </div>
+
+      <div>
+        <details open>
+          <summary>Vad menas med wheebuy spreadsheet?</summary>
+          <p>Uttrycket används som sökfras för kalkylblad eller listor med produktlänkar som förknippas med Wheebuy. Den här sidan är en fristående svensk vägledning och innehåller inget verifierat Wheebuy-kalkylblad.</p>
+        </details>
+        <details>
+          <summary>Finns det ett kalkylblad att ladda ned här?</summary>
+          <p>Nej. Här finns kategorilänkar och råd för att granska produkter. Kategorierna leder till angivna sidor på cafans.com och övriga länkar leder till https://www.cafans.com.</p>
+        </details>
+        <details>
+          <summary>Hur väljer jag rätt storlek på sneakers och kläder?</summary>
+          <p>Mät fotlängden för skor och ett plagg som redan passar för kläder. Jämför sedan med måttabellen för den specifika produkten. Kontrollera om skomåttet avser fotlängd eller innermått och om plaggets mått avser kropp eller plagg.</p>
+        </details>
+        <details>
+          <summary>Visar bilderna produkter som går att köpa hos CAFANS?</summary>
+          <p>Bilderna är stilreferenser från externa bildkällor. De bekräftar inte CAFANS sortiment, lagerstatus, priser eller produkternas äkthet. Läs alltid informationen på den aktuella produktsidan.</p>
+        </details>
+        <details>
+          <summary>Vad ska jag kontrollera före en beställning till Sverige?</summary>
+          <p>Kontrollera leveransland, fraktkostnad, beräknad leveranstid, returvillkor och vilka skatter eller avgifter som ingår. Be säljaren förklara oklara uppgifter innan du betalar.</p>
+        </details>
+        <details>
+          <summary>Är sidan officiellt kopplad till Wheebuy eller bildvarumärkena?</summary>
+          <p>Nej. Det här är en fristående guide utan officiell koppling till Wheebuy, Nike, Louis Vuitton, Gucci eller Hermès. Varumärkesnamnen används för att beskriva bildreferenser.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="nasta-steg">
+      <div>
+        <h2 id="nasta-steg">Börja med ett plagg.<br>Jämför det ordentligt.</h2>
+        <p>Välj en kategori, läs detaljerna och låt dina egna mått styra beslutet.</p>
+      </div>
+      <a class="button" href="https://www.cafans.com">
+        Fortsätt till CAFANS <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>
+      Fristående svensk guide om wheebuy spreadsheet. Varumärken tillhör
+      respektive innehavare. Produktbilder används som stilreferenser;
+      inga priser, erbjudanden, kundomdömen eller lageruppgifter anges här.
+    </p>
+    <a href="https://www.cafans.com">Besök CAFANS ↗</a>
+  </footer>
+</body>
+</html>
